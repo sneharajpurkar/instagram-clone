@@ -6,7 +6,7 @@ import Login from './components/Login';
 import AddPost from './components/AddPost';
 import Sidebar from './components/Sidebar';
 import Profile from './components/Profile';
-
+import SearchBar from './components/SearchBar'
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route excat path='/addpost' element={<AddPost/>}/>
         <Route excat path='/sidebar' element={<Sidebar/>}/>
         <Route excat path='/profile' element={<Profile/>}/>
+        <Route excat path='/searchbar' element={<SearchBar/>}/>
         </Routes>
 
       </div>
