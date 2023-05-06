@@ -34,7 +34,7 @@ function Register() {
       localStorage.setItem("userDataIn",JSON.stringify(dataFromLs));
       setUserData({email:'',name:'',username:'',password:''});
       route('/login');
-      toast.success("Signup Scucessful");
+      alert("Signup Scucessful");
     }
   }
 

@@ -3,12 +3,15 @@ import Footer from "./Footer";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { useReducer } from "react";
+import reducer, { initialState } from "../helper/reducer";
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const [state, dispatch] = useReducer(reducer, initialState)
   const router = useNavigate();
 
-
+  
   function checkLog(e) {
     e.preventDefault();
 
@@ -37,8 +40,12 @@ function Login() {
       );
       
       setFormData({ email: "", password: "" });
+      dispatch({
+        type: 'changed_name',
+        nextName: formData.email,
+      })
       router("/homepage");
-      toast.success("Log in sucessful");
+      alert("Log in sucessful");
     } else {
       setFormData({ email: "", password: "" });
       toast.error("Please check email or password");

@@ -277,11 +277,12 @@
     width: 100%;
 } */
 .profile-Sidebar>div{
-    width: 1200px;
+    width: 1500px;
+    margin-left: 1px;
 }
 .profile{
     width: 75%;
-    margin-left: -850px;
+    margin-left: -1050px;
     font-family: Arial, sans-serif;
     color: #262626;
 
